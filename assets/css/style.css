@@ -10,7 +10,7 @@
   --border:    #e2e8f0;
   --hover-bg:  #f1f5f9;
   --radius:    6px;
-  --max-w:     860px;
+  --max-w:     1050px;
   --nav-h:     56px;
 }
 
@@ -117,6 +117,10 @@ nav {
 
 /* ─── Section ───────────────────────────────────────────────── */
 .section { margin-bottom: 48px; }
+
+.section:first-of-type {
+  margin-top: 0;
+}
 
 .section-label {
   font-size: 11px;
