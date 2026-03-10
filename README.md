@@ -1,8 +1,16 @@
 # Ayishath Rusaina — Portfolio
 
-Personal portfolio website hosted on GitHub Pages.
+Personal portfolio website for **Ayishath Rusaina**, Civil Engineer and M.Tech student in Water Resources Engineering at NIT Calicut.
 
-**Live site:** [ruzicool.github.io](https://ruzicool.github.io)
+This repository contains the source code for the GitHub Pages site.
+
+---
+
+## Live Website
+
+[blueberrynest.github.io](https://blueberrynest.github.io)
+
+---
 
 ## Structure
 
@@ -18,15 +26,76 @@ Personal portfolio website hosted on GitHub Pages.
 │   ├── css/style.css   # Shared styles
 │   ├── js/main.js      # Active nav state
 │   └── resume/         # Place resume.pdf here
+│       └── Ayishath_Rusaina_Resume.pdf 
 └── README.md
 ```
 
+---
+
+## Deployment Workflow
+
+This repository follows a simple branching model:
+
+```
+main        → production (live GitHub Pages site)
+devel       → development branch
+feature/*   → feature development
+refactor/*  → code refactoring
+docs/*      → documentation updates
+fix/*       → bug fixes
+```
+
+Development happens in the `devel` branch. 
+Once the site is stable, `devel` is merged into main. 
+
+---
+
 ## Deployment
 
-This site is deployed via GitHub Pages from the `main` branch root. No build step required — push changes and they go live automatically.
+The site is deployed automatically via **GitHub Pages**.
 
-## Updating content
+- Source: `main` branch
+- Directory: repository root
 
-- Edit the relevant `.html` file directly.
-- To update the resume, replace `assets/resume/resume.pdf`.
-- To add a project, copy an existing `.project-card` block in `projects.html`.
+Any commit merged into `main` will update the live site.
+
+---
+
+## Updating the Website
+
+### Update page content
+
+Edit the corresponding HTML file:
+
+- `index.html`
+- `skills.html`
+- `education.html`
+- `experience.html`
+- `projects.html`
+- `contact.html`
+
+### Update resume
+
+Replace the file inside:
+
+```
+assets/resume/Ayishath_Rusaina_Resume.pdf
+```
+
+### Add a project
+
+Copy an existing `.project-card` block inside:
+
+```
+projects.html
+```
+
+and update its details.
+
+---
+
+## License
+
+This repository contains personal portfolio code and content.
+
+---
