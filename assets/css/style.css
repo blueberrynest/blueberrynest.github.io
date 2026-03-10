@@ -168,11 +168,15 @@ nav {
 }
 
 /* ─── Cards ─────────────────────────────────────────────────── */
-.card {
+
+.card-base {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 24px;
+}
+
+.card {
   margin-bottom: 12px;
 }
 
@@ -234,11 +238,8 @@ nav {
 }
 
 /* ─── Project Card ──────────────────────────────────────────── */
+
 .project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
@@ -357,9 +358,6 @@ nav {
 .quick-link-item {
   display: block;
   padding: 16px 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
   transition: border-color 100ms, background 100ms;
 }
 .quick-link-item:hover {
