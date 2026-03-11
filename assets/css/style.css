@@ -87,8 +87,12 @@ nav {
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
+  transition: color 120ms ease;
 }
-.nav-name:hover { text-decoration: none; color: var(--primary); }
+.nav-name:hover {
+  text-decoration: none;
+  color: var(--primary);
+}
 
 .nav-links {
   display: flex;
@@ -98,11 +102,16 @@ nav {
 }
 
 .nav-links a {
+  display: inline-block;
   font-size: 13px;
   color: var(--muted);
   padding: 5px 10px;
   border-radius: var(--radius);
-  transition: color 100ms, background 100ms;
+  transition: color 120ms ease, background 120ms ease;
+}
+.nav-links a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 .nav-links a:hover {
   color: var(--text);
