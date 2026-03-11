@@ -247,6 +247,25 @@ nav {
   gap: 16px;
 }
 
+.project-main {
+  flex: 1;
+}
+
+.project-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.project-desc {
+  margin-top: 8px;
+}
+
+.project-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
 .project-card:last-child { margin-bottom: 0; }
 
 .project-title {
