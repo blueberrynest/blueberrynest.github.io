@@ -261,6 +261,10 @@ nav {
   margin-top: 8px;
 }
 
+.project-tags {
+  margin-top: 10px;
+}
+
 .project-actions {
   display: flex;
   align-items: flex-start;
