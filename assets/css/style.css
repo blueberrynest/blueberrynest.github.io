@@ -18,7 +18,11 @@ html { font-size: 16px; }
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
-  background: var(--bg);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 80%, #f7d7d2 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, #dbe6f1 0%, transparent 40%),
+    #f7f7f7;
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -27,9 +31,9 @@ body {
 /* ─── Typography ───────────────────────────────────────────── */
 
 h1 {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 h2 {
@@ -61,37 +65,21 @@ a {
 a:hover { text-decoration: underline; }
 
 /* ─── Nav ───────────────────────────────────────────────────── */
-nav {
+.site-nav {
   position: sticky;
-  top: 0;
+  top: 24px;
   z-index: 100;
-  height: var(--nav-h);
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
   display: flex;
-  align-items: center;
-}
-
-.nav-inner {
-  width: 100%;
-  max-width: var(--max-w);
-  margin: 0 auto;
+  justify-content: center;
   padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.nav-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  transition: color 120ms ease;
-}
-.nav-name:hover {
-  text-decoration: none;
-  color: var(--primary);
+.nav-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .nav-links {
@@ -104,9 +92,10 @@ nav {
 .nav-links a {
   display: inline-block;
   font-size: 13px;
+  font-weight: 500;
   color: var(--muted);
-  padding: 5px 10px;
-  border-radius: var(--radius);
+  padding: 6px 14px;
+  border-radius: 50px;
   transition: color 120ms ease, background 120ms ease;
 }
 .nav-links a:focus-visible {
@@ -120,10 +109,7 @@ nav {
 }
 .nav-links a.active {
   color: var(--text);
-  font-weight: 500;
-  border-bottom: 2px solid var(--primary);
-  border-radius: 0;
-  padding-bottom: 3px;
+  background: var(--hover-bg);
 }
 
 /* ─── Page Layout ───────────────────────────────────────────── */
@@ -306,105 +292,84 @@ nav {
   border-color: #cbd5e1;
 }
 
-/* ─── Home Page ─────────────────────────────────────────────── */
-.home-identity {
-  padding: 48px 0 40px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
+/* ─── Hero ──────────────────────────────────────────────────── */
+.hero {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
 }
 
-.home-name {
-  font-size: 28px;
+.hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: var(--surface);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-name {
+  font-size: 40px;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
   color: var(--text);
-  line-height: 1.2;
+  margin-top: 32px;
 }
 
-.home-title {
-  margin-top: 6px;
+.hero-title {
   font-size: 15px;
+  letter-spacing: 0.05em;
   color: var(--muted);
-  font-weight: 400;
+  margin-top: 12px;
+  text-transform: uppercase;
 }
 
-.home-bio {
-  margin-top: 20px;
-  font-size: 14px;
-  color: var(--text);
+.hero-bio {
+  font-size: 15px;
   line-height: 1.7;
   max-width: 600px;
+  margin: 24px auto 0 auto;
+  color: var(--text);
 }
 
-.home-actions {
-  margin-top: 24px;
+.hero-actions {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .btn {
   display: inline-block;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  transition: background 100ms, border-color 100ms;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  border: 1px solid var(--primary);
-}
-.btn-primary:hover {
-  background: #1e40af;
-  border-color: #1e40af;
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn-secondary {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 50px;
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 150ms ease;
+  cursor: pointer;
 }
-.btn-secondary:hover {
+.btn:hover {
   background: var(--hover-bg);
   border-color: #cbd5e1;
   text-decoration: none;
-}
-
-/* ─── Quick Links (Home) ────────────────────────────────────── */
-.quick-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
-}
-
-.quick-link-item {
-  display: block;
-  padding: 16px 18px;
-  transition: border-color 100ms, background 100ms;
-}
-.quick-link-item:hover {
-  border-color: #cbd5e1;
-  background: var(--hover-bg);
-  text-decoration: none;
-}
-
-.quick-link-item span {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-
-.quick-link-item small {
-  font-size: 12px;
-  color: var(--muted);
+  transform: translateY(-1px);
 }
 
 /* ─── Contact ───────────────────────────────────────────────── */
@@ -430,18 +395,21 @@ nav {
 
 /* ─── Footer ────────────────────────────────────────────────── */
 
-footer {
-  border-top: 1px solid var(--border);
-  margin-top: 48px;
+.site-footer {
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px 80px;
 }
 
 .footer-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 20px 24px;
-  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   font-size: 12px;
   color: var(--muted);
+  text-align: center;
 }
 
 /* ─── Utility Classes ───────────────────────── */
@@ -471,9 +439,10 @@ footer {
 
 /* ─── Responsive ────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .nav-links a { padding: 5px 7px; font-size: 12px; }
-  .home-name { font-size: 22px; }
+  .nav-links a { padding: 6px 10px; font-size: 12px; }
+  .hero { padding: 60px 20px; }
+  .hero-avatar { width: 140px; height: 140px; }
+  .hero-name { font-size: 32px; }
   .project-card { flex-direction: column; }
   .project-link { align-self: flex-start; }
-  .quick-links { grid-template-columns: 1fr 1fr; }
 }
