@@ -113,10 +113,64 @@ a:hover { text-decoration: underline; }
 }
 
 /* ─── Page Layout ───────────────────────────────────────────── */
-.page {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 48px 24px 80px;
+.page
+{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 24px 60px;
+}
+
+/* ─── Page Title ───────────────────────────────────────────── */
+.page-title
+{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+}
+
+/* ─── Education List ────────────────────────────────────────── */
+.education-list
+{
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ─── Education Card ────────────────────────────────────────── */
+.education-card
+{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.education-card h3
+{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.edu-meta
+{
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.education-card p
+{
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
 }
 
 /* ─── Page Header ───────────────────────────────────────────── */
@@ -445,4 +499,12 @@ a:hover { text-decoration: underline; }
   .hero-name { font-size: 32px; }
   .project-card { flex-direction: column; }
   .project-link { align-self: flex-start; }
+  .education-card
+  {
+      padding: 20px;
+  }
+  .page
+  {
+      padding: 100px 20px 60px;
+  }
 }
