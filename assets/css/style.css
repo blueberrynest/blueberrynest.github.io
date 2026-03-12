@@ -173,6 +173,49 @@ a:hover { text-decoration: underline; }
     text-align: center;
 }
 
+/* ─── Experience List ───────────────────────────────────────── */
+.experience-list
+{
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ─── Experience Card ───────────────────────────────────────── */
+.experience-card
+{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.experience-card h3
+{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.exp-meta
+{
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.experience-card ul
+{
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.7;
+}
+
 /* ─── Page Header ───────────────────────────────────────────── */
 .page-header {
   margin-bottom: 40px;
@@ -207,13 +250,21 @@ a:hover { text-decoration: underline; }
   margin-top: 0;
 }
 
-.section-label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-bottom: 16px;
+.section-label
+{
+    display: table;
+    margin: 0 auto 28px auto;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 /* ─── Cards ─────────────────────────────────────────────────── */
@@ -500,6 +551,10 @@ a:hover { text-decoration: underline; }
   .project-card { flex-direction: column; }
   .project-link { align-self: flex-start; }
   .education-card
+  {
+      padding: 20px;
+  }
+  .experience-card
   {
       padding: 20px;
   }
