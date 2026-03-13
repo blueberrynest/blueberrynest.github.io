@@ -271,17 +271,8 @@ a:hover { text-decoration: underline; }
 .project-link
 {
     margin-top: 16px;
-    text-align: center;
-}
-
-.project-link a
-{
-    display: inline-block;
-    padding: 6px 14px;
-    font-size: 13px;
-    border-radius: 50px;
-    border: 1px solid var(--border);
-    background: var(--surface);
+    display: flex;
+    justify-content: center;
 }
 
 .project-tags
@@ -363,6 +354,7 @@ a:hover { text-decoration: underline; }
 .contact-btn svg
 {
     color: var(--muted);
+    display: block;
 }
 
 /* ─── Page Header ───────────────────────────────────────────── */
