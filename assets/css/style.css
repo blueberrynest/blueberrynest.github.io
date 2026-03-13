@@ -102,6 +102,12 @@ a:hover { text-decoration: underline; }
   border-radius: 50px;
   transition: color 120ms ease, background 120ms ease;
 }
+
+.nav-icon {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
 .nav-links a:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
@@ -627,10 +633,16 @@ a:hover { text-decoration: underline; }
     gap: 0;
   }
 
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
   .nav-links a {
-    padding: 5px 5px;
-    font-size: 11px;
-    white-space: nowrap;
+    padding: 6px 10px;
   }
 
   .page-title {
