@@ -130,6 +130,15 @@ a:hover { text-decoration: underline; }
     margin-bottom: 48px;
 }
 
+.page-subtitle
+{
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 520px;
+    margin: -36px auto 48px auto;
+}
+
 /* ─── Education List ────────────────────────────────────────── */
 .education-list
 {
@@ -214,6 +223,146 @@ a:hover { text-decoration: underline; }
     margin: 0;
     padding-left: 18px;
     line-height: 1.7;
+}
+
+/* ─── Projects List ─────────────────────────────────────────── */
+.projects-list
+{
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ─── Project Card ──────────────────────────────────────────── */
+.project-card
+{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.project-card h3
+{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.proj-meta
+{
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.project-card p
+{
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.project-link
+{
+    margin-top: 16px;
+    text-align: center;
+}
+
+.project-link a
+{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.project-tags
+{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag
+{
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+/* ─── Contact List ─────────────────────────────────────────── */
+.contact-list
+{
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-card
+{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.contact-card h3
+{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-buttons
+{
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-btn
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 120ms ease, border-color 120ms ease;
+}
+
+.contact-btn:hover
+{
+    background: var(--hover-bg);
+    border-color: #cbd5e1;
+    text-decoration: none;
+}
+
+.contact-btn svg
+{
+    color: var(--muted);
 }
 
 /* ─── Page Header ───────────────────────────────────────────── */
@@ -337,66 +486,6 @@ a:hover { text-decoration: underline; }
   padding: 4px 10px;
 }
 
-/* ─── Project Card ──────────────────────────────────────────── */
-
-.project-card {
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.project-main {
-  flex: 1;
-}
-
-.project-meta {
-  margin-top: 4px;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.project-tags {
-  margin-top: 10px;
-}
-
-.project-actions {
-  display: flex;
-  align-items: flex-start;
-}
-
-.project-card:last-child { margin-bottom: 0; }
-
-.project-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.project-desc {
-  margin-top: 4px;
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.project-link {
-  font-size: 12px;
-  white-space: nowrap;
-  color: var(--primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 5px 12px;
-  transition: background 100ms, border-color 100ms;
-  flex-shrink: 0;
-}
-.project-link:hover {
-  background: var(--hover-bg);
-  text-decoration: none;
-  border-color: #cbd5e1;
-}
-
 /* ─── Hero ──────────────────────────────────────────────────── */
 .hero {
   max-width: 640px;
@@ -477,27 +566,6 @@ a:hover { text-decoration: underline; }
   transform: translateY(-1px);
 }
 
-/* ─── Contact ───────────────────────────────────────────────── */
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 14px;
-}
-.contact-row:first-child { border-top: 1px solid var(--border); }
-
-.contact-label {
-  width: 80px;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  flex-shrink: 0;
-}
-
 /* ─── Footer ────────────────────────────────────────────────── */
 
 .site-footer {
@@ -555,6 +623,14 @@ a:hover { text-decoration: underline; }
       padding: 20px;
   }
   .experience-card
+  {
+      padding: 20px;
+  }
+  .project-card
+  {
+      padding: 20px;
+  }
+  .contact-card
   {
       padding: 20px;
   }
